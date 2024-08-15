@@ -1,0 +1,112 @@
+#kpay-form {
+  gap: 20px;
+  max-width: 420px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  font: 16px "Arial Rounded MT Bold", "Arial", sans-serif;
+}
+
+#kpay-form * {
+  box-sizing: border-box;
+}
+
+#kpay-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font: 24px "Arial Rounded MT Bold", "Arial", sans-serif;
+  color: rgb(31, 117, 203);
+}
+
+#kpay-form > div {
+  width: 100%;
+}
+
+#kpay-form button {
+  background-color: rgba(30, 143, 255, 0.815);
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+#kpay-form input:focus,
+#kpay-form select:focus {
+  outline: none;
+  border: 2px solid rgba(30, 143, 255, 0.799);
+}
+
+#kpay-form input::placeholder,
+#kpay-form select::placeholder {
+  color: rgba(0, 0, 0, 0.391);
+  font-weight: 300;
+}
+
+#kpay-form .money-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#kpay-form .money-container .amount-container {
+  width: 70%;
+}
+
+#kpay-form .money-container .currency-container {
+  width: 28%;
+}
+
+#kpay-form .payment_methods {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+
+#kpay-form .payment_methods > div {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+}
+
+.method_icons {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.method_radio_label {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  gap: 3px;
+  padding: 7px;
+  border: 1px solid rgba(30, 143, 255, 0.346);
+  width: fit-content;
+}
+
+.method_radio_label:hover {
+  background-color: rgba(30, 143, 255, 0.215);
+}
+
+.method_radio_label.active {
+  background-color: rgba(30, 143, 255, 0.215);
+}
+
+@media screen and (max-width: 768px) {
+  #kpay-form {
+    width: 100%;
+  }
+  #kpay-form .payment_methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  #kpay-form .payment_methods .method_radio_label {
+    width: 100%;
+  }
+}
